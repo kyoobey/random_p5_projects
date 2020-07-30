@@ -1,0 +1,25 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+			"folder_exclude_patterns": ["lib",".workspaces"],
+			"file_exclude_patterns": ["manage.py", "*.sublime*"]
+		},
+		{
+			"name": "lib",
+			"path": "lib",
+			"file_exclude_patterns": ["*min*"]
+		}
+	],
+	"build_systems":
+	[
+		{
+			"name": "serve",
+			"shell_cmd": "cd $project_path && ./manage.py serve $file_path; read -p '[Done]\n'",
+			"target": "terminus_open",
+			"panel_name": "output",
+			"title": "output"
+		}
+	]
+}

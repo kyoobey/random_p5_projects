@@ -110,7 +110,7 @@ def serve_project(name:str=None) -> None:
 
 	def f1():
 		sleep(1)
-		os.system(s)
+		os.system(s+' > /dev/null 2>&1')
 	Thread(target=f1).start()
 	os.system('python3 -m http.server 8000 --bind 0.0.0.0')
 
